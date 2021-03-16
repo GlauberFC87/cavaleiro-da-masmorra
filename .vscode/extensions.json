@@ -1,6 +1,7 @@
 {
   "recommendations": [
-      "dbaeumer.vscode-eslint",
-      "ritwickdey.liveserver"
+    "dbaeumer.vscode-eslint",
+    "ritwickdey.liveserver",
+    "schroeter.prettier-vscode-space-parenthesis"
   ]
 }

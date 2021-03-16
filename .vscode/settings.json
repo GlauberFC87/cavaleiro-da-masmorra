@@ -1,4 +1,7 @@
 {
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
