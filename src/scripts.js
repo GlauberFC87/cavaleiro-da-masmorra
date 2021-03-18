@@ -64,7 +64,6 @@ function createBoard() {
     function validateConflicts(currentComponent, conflictItem) {
       function finishGame(titulo, mensagem) {
         setTimeout(() => {
-          // Object.isFrozen("mini-demon");
           Swal.fire({
             title: titulo,
             text: mensagem,
@@ -131,8 +130,6 @@ function createBoard() {
                   location.reload();
                 }
               });
-
-              // location.reload();
             }, 20);
           }
         }
@@ -236,22 +233,17 @@ let resetButton = document.querySelector(".reset");
 
 resetButton.addEventListener("click", reset);
 
-for (i = 0; i < 7; i++) {
+for (i = 0; i < 15; i++) {
   board.createEnemy({
-    top: TILE_SIZE * 5,
-    left: TILE_SIZE * 15,
-  });
-
-  board.createEnemy({
-    top: TILE_SIZE * 5,
-    left: TILE_SIZE * 3,
+    top: TILE_SIZE * getRandomInt(3, 16),
+    left: TILE_SIZE * getRandomInt(4, 18),
   });
 }
 
-for (i = 0; i < 18; i++) {
+for (i = 0; i < 22; i++) {
   const trap = board.createItem({
     item: "trap",
     top: TILE_SIZE * getRandomInt(3, 16),
-    left: TILE_SIZE * getRandomInt(4, 18),
+    left: TILE_SIZE * getRandomInt(3, 18),
   });
 }
