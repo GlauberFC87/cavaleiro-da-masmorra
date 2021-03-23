@@ -22,7 +22,7 @@ function createBoard() {
 
     boardElement.appendChild(htmlElement);
 
-    let steps = 100;
+    let steps = 50;
     let heroSteps = document.querySelector(".steps");
     heroSteps.textContent = "Passos: " + steps;
 
@@ -123,7 +123,6 @@ function createBoard() {
                 title: "Você morreu de cansaço...",
                 text: "Mais sorte na próxima!",
                 allowOutsideClick: false,
-
                 confirmButtonText: `Retry`,
               }).then((result) => {
                 if (result.isConfirmed) {
@@ -173,10 +172,10 @@ function createBoard() {
       const randomIndex = Math.floor(Math.random() * direction.length);
 
       const randomDirection = direction[randomIndex];
+
       enemy.move(randomDirection);
     }, 1000);
   }
-
   return {
     createItem: createItem,
     createHero: createHero,
@@ -244,6 +243,6 @@ for (i = 0; i < 22; i++) {
   const trap = board.createItem({
     item: "trap",
     top: TILE_SIZE * getRandomInt(3, 16),
-    left: TILE_SIZE * getRandomInt(3, 18),
+    left: TILE_SIZE * getRandomInt(1, 18),
   });
 }
